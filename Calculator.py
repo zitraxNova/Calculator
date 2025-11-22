@@ -79,6 +79,8 @@ display = tk.Entry(
     root, textvariable=display_var, font=("Arial", 28),
     bg="black", fg="white", justify="right", bd=0, highlightthickness=0)
 display.grid(row=0, column=0, columnspan=4, padx=10, pady=20, ipady=20)
+display.bind("<Key>", lambda e: "break")
+
 # Расположение кнопок
 buttons = [
     ("7", 0, 1), ("8", 1, 1), ("9", 2, 1), ("/", 3, 1),
